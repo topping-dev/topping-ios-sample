@@ -21,18 +21,18 @@ PODS:
   - MotionAnimator (2.8.1):
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
-  - Toaster (2.2.0)
-  - Topping (0.1.1):
+  - Toaster (2.3.0)
+  - Topping (0.1.2):
     - ActionSheetPicker-3.0 (= 2.5.0)
     - BEMCheckBox (= 1.4.1)
     - GDataXML-HTML (= 1.4.1)
     - Material (= 3.1.8)
     - MaterialComponents/ActivityIndicator (= 113.2)
     - MBProgressHUD (= 1.2.0)
-    - Toaster (= 2.2.0)
+    - Toaster (= 2.3.0)
 
 DEPENDENCIES:
-  - Topping (from `../topping-ios/PodSpec Metadata/Topping.podspec`)
+  - Topping (from `../topping-ios/PodSpecMetadata/Topping.podspec`)
 
 SPEC REPOS:
   trunk:
@@ -50,7 +50,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Topping:
-    :podspec: "../topping-ios/PodSpec Metadata/Topping.podspec"
+    :podspec: "../topping-ios/PodSpecMetadata/Topping.podspec"
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 6d79f6f3b98e2b21d218dd65a39f634ff37a27e5
@@ -63,9 +63,9 @@ SPEC CHECKSUMS:
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
-  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
-  Topping: 86d17e8bb2f33420c414bfe42092561f988b385b
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+  Topping: aea8e7acb5abe8df521cf8b08d32a732ea6db725
 
-PODFILE CHECKSUM: 7fb0b59ccf82b8af722c93a4a31a5634112def73
+PODFILE CHECKSUM: dbebc6de21cc17f0ea42920a017a86a2d7579fe6
 
 COCOAPODS: 1.10.0

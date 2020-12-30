@@ -2,5 +2,5 @@ use_frameworks!
 
 target 'iostest' do
   pod 'Topping'
-  #pod 'Topping', :podspec => "../topping-ios/PodSpec Metadata/Topping.podspec"
+  #pod 'Topping', :podspec => "../topping-ios/PodSpecMetadata/Topping.podspec"
 end

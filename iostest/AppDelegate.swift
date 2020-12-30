@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import topping
+import Topping
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

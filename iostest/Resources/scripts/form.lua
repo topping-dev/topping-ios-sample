@@ -1,30 +1,32 @@
 function FormTestLL_Constructor(pGUI, luacontext)
-	local button = pGUI:GetViewById("formTestButton");
-	button:SetOnClickListener(LuaTranslator.Register(button, "TestButton_Click"));
-	local checkbox = pGUI:GetViewById("formTestCheckBox");
-	checkbox:SetOnCheckedChangedListener(LuaTranslator.Register(checkbox, "TestCheckBox_CheckedChanged"));
-	local combobox = pGUI:GetViewById("formTestComboBox");
-	combobox:AddComboItem("Item 1", 1);
-	combobox:AddComboItem("Item 2", 2);
-	combobox:AddComboItem("Item 3", 3);
-	combobox:AddComboItem("Item 4", 4);
-	combobox:SetOnComboChangedListener(LuaTranslator.Register(combobox, "TestComboBox_Changed"));
-	local edittext = pGUI:GetViewById("formTestEt");
-    local pb = pGUI:GetViewById("formTestProgressBar");
-    pb:SetMax(100);
-    pb:SetProgress(35);
+	local button = pGUI:getViewById(LR.id.formTestButton);
+	button:setOnClickListener(LuaTranslator.register(button, "TestButton_Click"));
+    button:setTextRef(LR.string.teststring);
+	local checkbox = pGUI:getViewById(LR.id.formTestCheckBox);
+	checkbox:setOnCheckedChangedListener(LuaTranslator.register(checkbox, "TestCheckBox_CheckedChanged"));
+	local combobox = pGUI:getViewById(LR.id.formTestComboBox);
+    combobox:addItem("Item 1", 1);
+    combobox:addItem("Item 2", 2);
+    combobox:addItem("Item 3", 3);
+    combobox:addItem("Item 4", 4);
+	combobox:setOnComboChangedListener(LuaTranslator.register(combobox, "TestComboBox_Changed"));
+	local edittext = pGUI:getViewById(LR.id.formTestEt);
+    local pb = pGUI:getViewById(LR.id.formTestProgressBar);
+    pb:setMax(100);
+    pb:setProgress(35);
 end
 
 function TestCheckBox_CheckedChanged(pGUI, context, isChecked)
-	LuaToast.Show(context, "CheckBox value is " .. tostring(isChecked), 1000);
+	LuaToast.showInternal(context, "CheckBox value is " .. tostring(isChecked), 1000);
 end
 
 function TestButton_Click(pGUI, context)
-	LuaToast.Show(context, "Test button clicked", 1000);
+	LuaToast.show(context, LR.string.test_button_clicked, 1000);
+    pGUI:findNavController():navigate(LR.id.action_menuFragment_to_receiveFragment)
 end
 
 function TestComboBox_Changed(pGUI, context, name, value)
-	LuaToast.Show(context, "Combobox id " .. name, 1000);
+	LuaToast.showInternal(context, "Combobox id " .. name, 1000);
 end
 
-LuaForm.RegisterFormEvent("formTestLL", LuaForm.FORM_EVENT_CREATE, FormTestLL_Constructor);
+LuaEvent.registerUIEvent(LR.id.formTestLL, LuaEvent.UI_EVENT_VIEW_CREATE, FormTestLL_Constructor)
